@@ -16,7 +16,6 @@ const productSchema = new Schema<IProduct>({
   },
   quantity: {
     type: Number,
-    required: true,
   },
   description: {
     type: String,
@@ -32,7 +31,6 @@ const productSchema = new Schema<IProduct>({
   },
   image: {
     type: String,
-    required: true,
   },
 });
 

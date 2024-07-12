@@ -21,12 +21,8 @@ const getSingleProductFromDB = async (id: string) => {
   const result = await Product.findById(id);
   return result;
 };
-const updateProductIntoDB = async (id: string, payload: IProduct) => {
-  const result = await Product.findByIdAndUpdate(
-    id,
-    { $set: payload },
-    { new: true },
-  );
+const updateProductIntoDB = async (id: string, payload: Partial<IProduct>) => {
+  const result = await Product.findByIdAndUpdate(id, payload, { new: true });
   return result;
 };
 
