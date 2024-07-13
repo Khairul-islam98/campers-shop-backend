@@ -59,7 +59,7 @@ class QueryBuilder<T> {
   }
   sort() {
     const sortOption = this.query.sort as string | undefined;
-    let sort = 'price';
+    let sort = '+price';
     if (sortOption) {
       const [field, order] = sortOption.split(':');
       sort = `${order === 'desc' ? '-' : ''}${field}`;
